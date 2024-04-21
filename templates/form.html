@@ -1,0 +1,181 @@
+<html>
+  <head>
+    <style>
+      body {
+        background-color: white;
+        text-align: center;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        margin: 50px;
+        border-radius: 10px;
+        background-color: #D9D9D9;
+        padding: 20px;
+      }
+
+      .input-field {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        color: black;
+        width: 200px;
+        text-align: left;
+        padding: 10px;
+      }
+      input {
+        padding: 10px;
+        border-radius: 5px;
+        border: black 1px solid;
+        outline: none;
+        color: #040404;
+        font-size: 16px;
+
+        background-color: #ffffff;
+      }
+      .predict {
+        position: absolute;
+
+        transform: translate(-50%, -50%);
+        background-color: white;
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 10px 60px;
+        border: black 1px solid;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="{{ url_for('predict') }}" method="POST">
+      <div class="container">
+        <div class="input-field">
+          <label for="">radius_mean</label>
+          <input type="text" name="radius_mean" required="required" />
+        </div>
+        <div class="input-field">
+          <label for="">texture_mean</label>
+          <input type="text" name="texture_mean" required="required" />
+        </div>
+        <div class="input-field">
+          <label for="">perimeter_mean</label>
+          <input type="text" name="perimeter_mean" required="required" />
+        </div>
+        <div class="input-field">
+          <label for="">area_mean</label>
+          <input type="text" name="area_mean" required="required" />
+        </div>
+        <div class="input-field">
+          <label for="">smoothness_mean</label>
+          <input type="text" name="smoothness_mean" required="required" />
+        </div>
+        <div class="input-field">
+          <label for="">compactness_mean</label>
+          <input type="text" name="compactness_mean" required="required" />
+        </div>
+        <div class="input-field">
+          <label for="">concavity_mean</label>
+          <input type="text" name="concavity_mean" required="required" />
+        </div>
+        <div class="input-field">
+          <label for="">concave points_mean</label>
+          <input type="text" name="concave points_mean" required="required" />
+        </div>
+        <div class="input-field">
+          <label for="">symmetry_mean</label>
+          <input type="text" name="symmetry_mean" required="required" />
+        </div>
+        <div class="input-field">
+          <label for="">fractal_dimension_mean</label>
+          <input type="text" name="fractal_dimension_mean" required="required" />
+        </div>
+        <div class="input-field">
+          <label for="">radius_se</label>
+          <input type="text" name="radius_se" required="required" />
+        </div>
+        <div class="input-field">
+          <label for="">texture_se</label>
+          <input type="text" name="texture_se" required="required" />
+        </div>
+        <div class="input-field">
+          <label for="">perimeter_se</label>
+          <input type="text" name="perimeter_se" required="required" />
+        </div>
+        <div class="input-field">
+          <label for="">area_se</label>
+          <input type="text" name="area_se" required="required" />
+        </div>
+        <div class="input-field">
+          <label for="">smoothness_se</label>
+          <input type="text" name="smoothness_se" required="required" />
+        </div>
+        <div class="input-field">
+          <label for="">compactness_se</label>
+          <input type="text" name="compactness_se" required="required" />
+        </div>
+        <div class="input-field">
+          <label for="">concavity_se</label>
+          <input type="text" name="concavity_se" required="required" />
+        </div>
+        <div class="input-field">
+          <label for="">concave points_se</label>
+          <input type="text" name="concave points_se" required="required" />
+        </div>
+        <div class="input-field">
+          <label for="">symmetry_se</label>
+          <input type="text" name="symmetry_se" required="required" />
+        </div>
+        <div class="input-field">
+          <label for="">fractal_dimension_se</label>
+          <input type="text" name="fractal_dimension_se" required="required" />
+        </div>
+        <div class="input-field">
+          <label for="">radius_worst</label>
+          <input type="text" name="radius_worst" required="required" />
+        </div>
+        <div class="input-field">
+          <label for="">texture_worst</label>
+          <input type="text" name="texture_worst" required="required" />
+        </div>
+        <div class="input-field">
+          <label for="">perimeter_worst</label>
+          <input type="text" name="perimeter_worst" required="required" />
+        </div>
+        <div class="input-field">
+          <label for="">area_worst</label>
+          <input type="text" name="area_worst" required="required" />
+        </div>
+        <div class="input-field">
+          <label for="">smoothness_worst</label>
+          <input type="text" name="smoothness_worst" required="required" />
+        </div>
+        <div class="input-field">
+          <label for="">compactness_worst</label>
+          <input type="text" name="compactness_worst" required="required" />
+        </div>
+        <div class="input-field">
+          <label for="">concavity_worst</label>
+          <input type="text" name="concavity_worst" required="required" />
+        </div>
+        <div class="input-field">
+          <label for="">concave points_worst</label>
+          <input type="text" name="concave points_worst" required="required" />
+        </div>
+        <div class="input-field">
+          <label for="">symmetry_worst</label>
+          <input type="text" name="symmetry_worst" required="required" />
+        </div>
+      </div>
+    
+      <div>
+        <button class="predict" type="submit">GET RESULLT</button>
+      </div>
+    </form>
+    
+  </body>
+</html>

@@ -1,0 +1,107 @@
+<html>
+  <head>
+    <style>
+      body {
+        background-color: white;
+        
+       
+      }
+      img {
+      position: absolute;
+      top: 20%;
+      left: 10%;
+
+      
+       
+      }
+      .container {
+      display: flex;
+      flex-direction: row;
+     
+
+      }
+      .paragraph {
+        position: absolute;
+        top: 50%;
+        left: 65%;
+        transform: translate(-40%, -60%);
+        font-size: 30px;
+        font-weight: bold;
+        text-align: start;
+      }
+      .predict {
+        position: absolute;
+        top: 60%;
+        left: 80%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+       
+        font-size: 20px;
+        font-weight: bold;
+        padding: 10px 60px;
+        border: black 1px solid;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+      a{
+        text-decoration: none;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <img
+        src="{{url_for('static', filename='firstpic.jpg')}}"
+          alt="home page image"
+          
+        />
+        <div class="paragraph">
+            <p>Discover peace of mind with our advanced breast cancer detection system, putting early detection in your hands.</p>
+        </div>
+        <button class="predict" onclick="window.location.href='no.html'";><a href="{{ url_for('form') }}">PREDICT</a></button>
+        
+    </div>
+    
+    
+    
+  </body>
+</html>
+
+<!-- body {
+  background-color: #eabdd1;
+  text-align: center;
+}
+img {
+  display: fixed;
+  margin-top: 100px;
+  border-radius: 5%;
+}
+.container {
+  position: relative;
+text-align: center;
+color: white;
+}
+.paragraph {
+  position: absolute;
+  top: 70%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: bold;
+  text-align: start;
+}
+.predict {
+  position: absolute;
+  top: 80%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  background-color: #FADAE5;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 16px 40px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+} -->
